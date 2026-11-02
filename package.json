@@ -1,0 +1,24 @@
+{
+  "name": "@hux_xl/vuln-check",
+  "version": "1.0.0",
+  "description": "MCP server for dependency vulnerability lookup via OSV.dev: query CVEs by package+version, batch-scan up to 50 dependencies in one call, fetch full advisory detail (CVSS, fixed versions), and query by git commit. Zero API key, zero dependencies.",
+  "license": "MIT",
+  "author": "NZ1Labs",
+  "type": "module",
+  "bin": { "nz1labs-vuln-check": "index.js" },
+  "main": "index.js",
+  "engines": { "node": ">=18" },
+  "keywords": [
+    "mcp", "model-context-protocol", "security", "vulnerability",
+    "cve", "osv", "dependency", "supply-chain", "devsecops", "nz1labs"
+  ],
+  "files": ["index.js", "README.md"],
+  "repository": { "type": "git", "url": "https://github.com/isoloman275-wq/vuln-check" },
+  "homepage": "https://github.com/isoloman275-wq/vuln-check#readme",
+  "bugs": { "url": "https://github.com/isoloman275-wq/vuln-check/issues" },
+  "mcpHive": {
+    "deploymentType": "local",
+    "npxCommand": "npx -y @hux_xl/vuln-check",
+    "categories": ["security", "developer-tools"]
+  }
+}
