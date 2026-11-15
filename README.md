@@ -71,6 +71,10 @@ npx -y @hux_xl/vuln-check
 }
 ```
 
+## Also on MCP Hive
+
+vuln-check is live on the [MCP Hive marketplace](https://mcp-hive.com/explore) (category: **security**) as *"Vuln Check - Dependency CVE Lookup"* — pay-per-call at **$0.01/call**, deployable through the Hive proxy for consumers who prefer marketplace-billed access over running the server locally. Both lanes serve the same OSV.dev-backed tools.
+
 ## Network and permissions
 
 - **Hosts fetched:** `api.osv.dev` only (HTTPS POST to `/v1/query` and `/v1/querybatch`, HTTPS GET to `/v1/vulns/{id}`). No other network access, ever.
