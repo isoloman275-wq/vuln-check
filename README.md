@@ -71,6 +71,25 @@ npx -y @hux_xl/vuln-check
 }
 ```
 
+## Also available as a pay-per-call HTTP API (x402, USDC on Base)
+
+No MCP, no install? Call it directly over HTTP with x402 micropayments — your agent pays
+per call in USDC, no account, no API key. Same OSV.dev backing, 12 routes.
+
+```bash
+# any x402 buyer client (Base mainnet, USDC):
+#   POST https://x402.nz1labs.com/v1/query   {ecosystem, package, version}  — $0.003/call
+#   POST https://x402.nz1labs.com/v1/batch   {deps: [50 max]}                — $0.006/call
+#   GET  https://x402.nz1labs.com/v1/vulns/:id  (CVE/GHSA/OSV id)            — $0.003/call
+#   GET  https://x402.nz1labs.com/v1/cves/:id                                — $0.003/call
+#   POST https://x402.nz1labs.com/v1/commit  {ecosystem, commit}             — $0.003/call
+# unauthenticated: GET /health, GET /stats, GET /sample
+curl https://x402.nz1labs.com/sample
+```
+
+Discovery: indexed in the x402 Bazaar (`x402.nz1labs.com`, serviceName **VulnCheck by NZ1Labs**) —
+agents find it via any x402 discovery search for "vulnerability" / "cve" / "security".
+
 ## Also on MCP Hive
 
 vuln-check is live on the [MCP Hive marketplace](https://mcp-hive.com/explore) (category: **security**) as *"Vuln Check - Dependency CVE Lookup"* — pay-per-call at **$0.01/call**, deployable through the Hive proxy for consumers who prefer marketplace-billed access over running the server locally. Both lanes serve the same OSV.dev-backed tools.
